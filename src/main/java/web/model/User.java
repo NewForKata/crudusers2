@@ -130,12 +130,11 @@ public class User implements UserDetails {
         return age == user.age &&
                 name.equals(user.name) &&
                 lastname.equals(user.lastname) &&
-                email.equals(user.email) &&
-                roles.equals(user.roles);
+                email.equals(user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, lastname, age, email, roles);
+        return Objects.hash(name, lastname, age, email);
     }
 }
